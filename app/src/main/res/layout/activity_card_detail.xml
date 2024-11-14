@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/ic_background"
+    tools:context=".activities.activities.CardDetailActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_card_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="15dp"
+        app:cardCornerRadius="15dp"
+        android:layout_margin="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="15dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:text="Card Name"/>
+            <EditText
+                android:id="@+id/etCardName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginHorizontal="20sp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="15dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Label Color :"
+                android:textSize="18sp"
+                android:textColor="#9FA2A3"/>
+            <TextView
+                android:id="@+id/tvColorChanging"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Select Color"
+                android:padding="10dp"
+                android:textSize="20sp"
+                android:layout_marginVertical="20sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Members :"
+                android:textSize="18sp"
+                android:textColor="#9FA2A3"/>
+            <TextView
+                android:id="@+id/tvAddingMember"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginVertical="20sp"
+                android:text="Select Members"
+                android:padding="10dp"
+                android:textSize="20sp"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvShowMembers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginVertical="10sp"
+                android:visibility="gone"
+                tools:visibility="visible"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Due Date :"
+                android:textSize="18sp"
+                android:textColor="#9FA2A3"/>
+            <TextView
+                android:id="@+id/tv_select_dueDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Select Due Date"
+                android:padding="10dp"
+                android:textSize="20sp"
+                android:layout_marginVertical="20sp"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnUpdateCardDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginTop="20sp"
+                android:text="UPDATE"
+                android:textColor="@color/white"
+                android:background="@drawable/color_button"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

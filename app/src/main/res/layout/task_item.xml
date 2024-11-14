@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="10dp"
+    app:cardCornerRadius="10dp"
+    android:background="#E6E7E8"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvAddList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Add List"
+            android:textSize="20sp"
+            android:gravity="center"
+
+            android:textColor="@color/colorPrimary"
+            android:background="#E6E7E8"
+            android:padding="15dp"
+            />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvAddTask"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:id="@+id/llAddingTask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:orientation="horizontal">
+                <ImageButton
+                    android:id="@+id/ibCancelTaskCreating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:src="@drawable/ic_cancel"/>
+                <EditText
+                    android:id="@+id/etAddTask"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <ImageButton
+                    android:id="@+id/ibConfirmTaskCreating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:src="@drawable/ic_done"/>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <LinearLayout
+            android:id="@+id/llTaskDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E6E7E8"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="visible">
+            <LinearLayout
+                android:id="@+id/llDetailsBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="#E6E7E8"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tvTaskName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Title"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:textSize="25sp"/>
+                <ImageButton
+                    android:id="@+id/ibEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:padding="5dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ic_edit"/>
+                <ImageButton
+                    android:id="@+id/ibDelete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_marginHorizontal="8dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_delete"/>
+            </LinearLayout>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_Edit_delete_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:visibility="visible">
+                <LinearLayout
+                    android:id="@+id/llEdit_delete_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:orientation="horizontal">
+                    <ImageButton
+                        android:id="@+id/ibSecondBarCancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:src="@drawable/ic_cancel"/>
+                    <EditText
+                        android:id="@+id/etSecondBarAddText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                    <ImageButton
+                        android:id="@+id/ibSecondBarConfirm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:src="@drawable/ic_done"/>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#A3A6A8"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTasks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E6E7E8"
+
+                />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvAddingCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:elevation="11dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                tools:visibility="visible">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:orientation="horizontal">
+                    <ImageButton
+                        android:id="@+id/ibCancelCardButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:src="@drawable/ic_cancel"/>
+                    <EditText
+                        android:id="@+id/etAddCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                    <ImageButton
+                        android:id="@+id/ibConfirmCardButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:src="@drawable/ic_done"/>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvAddCard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Add Card"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:background="#E6E7E8"
+                android:padding="15dp"
+                />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+      </androidx.cardview.widget.CardView>
+
+
+
